@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors, unused_local_variable, avoid_print, unused_element
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors, unused_local_variable, avoid_print, unused_element //5de7fd5d53307753158aeec38a334a55
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -34,7 +34,7 @@ List<String> info = [];
 class _HomeViewState extends State<HomePage> {
   Future getWeather(String city, List<String> info) async {
     var response = await http.get(Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&APPID=5de7fd5d53307753158aeec38a334a55'));
+        'https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&APPID='));
     var jsonData = jsonDecode(response.body);
     setState(() {
       if (response.statusCode == 200) {
